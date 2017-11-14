@@ -1,0 +1,30 @@
+<body>
+<h1 id="display">00:00:00 AM/PM</h1>
+</body>
+<script>
+setInterval(clock,1000);
+function clock()
+{
+d=new Date();
+h=d.getHours();
+m=d.getMinutes();
+s=d.getSeconds();
+show=document.getElementById("display");
+if(h>12)
+{
+  show.innerHTML=h-12+":"+m+":"+s+"AM";
+}
+elseif(h==12)
+{
+  show.innerHTML=h+":"+m+":"+s+"PM";
+}
+elseif(h==0)
+{
+  show.innerHTML=h+12+":"+m+":"+s+"AM";
+}
+else
+{
+  show.innerHTML=h+":"+m+":"+s+"AM";
+}
+}
+</script>
