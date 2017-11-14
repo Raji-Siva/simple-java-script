@@ -1,0 +1,26 @@
+<style>
+div
+{
+  width:250px;
+  height:250px;
+  border:1px solid black;
+  overflow:scroll;
+}
+</style>
+<body>
+<div id="display"></div>
+<input type="text" id="bx1">
+<input type="button" value="update" onclick="update()">
+</body>
+<script>
+function update()
+{
+  e=document.createElement("h1");
+  v=document.getElementById("bx1").value;
+  tn=document.createTextNode(v);
+  e.appendChild(tn);
+  e.style.borderbottom="1px solid black";
+  d=document.getElementById("display");
+  d=appendChild(e);
+}
+</script>
